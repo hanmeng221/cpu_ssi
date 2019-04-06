@@ -1,0 +1,221 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'SEG_LED:mysegled|flag'
+Slack : -47.997
+TNS   : -213.453
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK:myclock|clock'
+Slack : -27.092
+TNS   : -10972.907
+
+Type  : Slow 1200mV 85C Model Setup 'qclk'
+Slack : -20.774
+TNS   : -1322.573
+
+Type  : Slow 1200mV 85C Model Setup 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -5.152
+TNS   : -169.405
+
+Type  : Slow 1200mV 85C Model Setup 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -3.566
+TNS   : -104.076
+
+Type  : Slow 1200mV 85C Model Setup 'PC:mypc|pc[10]'
+Slack : -2.081
+TNS   : -23.651
+
+Type  : Slow 1200mV 85C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.572
+TNS   : -37.653
+
+Type  : Slow 1200mV 85C Model Hold 'qclk'
+Slack : 0.001
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK:myclock|clock'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'SEG_LED:mysegled|flag'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : 0.493
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'PC:mypc|pc[10]'
+Slack : 0.577
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'qclk'
+Slack : -3.000
+TNS   : -337.575
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK:myclock|clock'
+Slack : -1.487
+TNS   : -1489.974
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SEG_LED:mysegled|flag'
+Slack : -1.487
+TNS   : -31.227
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PC:mypc|pc[10]'
+Slack : 0.288
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'SEG_LED:mysegled|flag'
+Slack : -43.951
+TNS   : -195.075
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK:myclock|clock'
+Slack : -24.934
+TNS   : -10269.426
+
+Type  : Slow 1200mV 0C Model Setup 'qclk'
+Slack : -19.012
+TNS   : -1211.450
+
+Type  : Slow 1200mV 0C Model Setup 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -5.055
+TNS   : -165.109
+
+Type  : Slow 1200mV 0C Model Setup 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -3.265
+TNS   : -96.914
+
+Type  : Slow 1200mV 0C Model Setup 'PC:mypc|pc[10]'
+Slack : -2.007
+TNS   : -22.847
+
+Type  : Slow 1200mV 0C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.405
+TNS   : -32.260
+
+Type  : Slow 1200mV 0C Model Hold 'qclk'
+Slack : 0.016
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK:myclock|clock'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SEG_LED:mysegled|flag'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'PC:mypc|pc[10]'
+Slack : 0.562
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'qclk'
+Slack : -3.000
+TNS   : -337.575
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK:myclock|clock'
+Slack : -1.487
+TNS   : -1489.974
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SEG_LED:mysegled|flag'
+Slack : -1.487
+TNS   : -31.227
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : 0.052
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PC:mypc|pc[10]'
+Slack : 0.263
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'SEG_LED:mysegled|flag'
+Slack : -19.892
+TNS   : -81.660
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK:myclock|clock'
+Slack : -11.249
+TNS   : -4318.137
+
+Type  : Fast 1200mV 0C Model Setup 'qclk'
+Slack : -8.300
+TNS   : -437.717
+
+Type  : Fast 1200mV 0C Model Setup 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -1.867
+TNS   : -58.533
+
+Type  : Fast 1200mV 0C Model Setup 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.250
+TNS   : -36.379
+
+Type  : Fast 1200mV 0C Model Setup 'PC:mypc|pc[10]'
+Slack : -0.322
+TNS   : -1.922
+
+Type  : Fast 1200mV 0C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -0.792
+TNS   : -21.276
+
+Type  : Fast 1200mV 0C Model Hold 'qclk'
+Slack : -0.176
+TNS   : -0.325
+
+Type  : Fast 1200mV 0C Model Hold 'PC:mypc|pc[10]'
+Slack : 0.085
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : 0.121
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK:myclock|clock'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'SEG_LED:mysegled|flag'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'qclk'
+Slack : -3.000
+TNS   : -243.024
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK:myclock|clock'
+Slack : -1.000
+TNS   : -1002.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SEG_LED:mysegled|flag'
+Slack : -1.000
+TNS   : -21.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : 0.277
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PC:mypc|pc[10]'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : 0.402
+TNS   : 0.000
+
+------------------------------------------------------------
