@@ -1,5 +1,5 @@
 Assembler report for muliplyCPU
-Sat Apr 06 20:02:29 2019
+Sat Apr 06 22:15:27 2019
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Apr 06 20:02:29 2019 ;
+; Assembler Status      ; Successful - Sat Apr 06 22:15:27 2019 ;
 ; Revision Name         ; muliplyCPU                            ;
 ; Top-level Entity Name ; CPU                                   ;
 ; Family                ; Cyclone IV E                          ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                     ;
 +----------------+-------------------------------------------------------------+
 ; Device         ; EP4CE10F17C8                                                ;
-; JTAG usercode  ; 0x003F5E4C                                                  ;
-; Checksum       ; 0x003F5E4C                                                  ;
+; JTAG usercode  ; 0x003A3DD2                                                  ;
+; Checksum       ; 0x003A3DD2                                                  ;
 +----------------+-------------------------------------------------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Sat Apr 06 20:02:27 2019
+    Info: Processing started: Sat Apr 06 22:15:26 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off muliplyCPU -c muliplyCPU
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4628 megabytes
-    Info: Processing ended: Sat Apr 06 20:02:30 2019
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4630 megabytes
+    Info: Processing ended: Sat Apr 06 22:15:27 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

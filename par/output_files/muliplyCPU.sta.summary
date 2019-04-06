@@ -3,219 +3,267 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'SEG_LED:mysegled|flag'
-Slack : -47.997
-TNS   : -213.453
+Slack : -46.618
+TNS   : -202.691
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK:myclock|clock'
-Slack : -27.092
-TNS   : -10972.907
+Slack : -27.187
+TNS   : -8608.734
 
 Type  : Slow 1200mV 85C Model Setup 'qclk'
-Slack : -20.774
-TNS   : -1322.573
+Slack : -21.611
+TNS   : -1286.582
 
 Type  : Slow 1200mV 85C Model Setup 'ID_EX:myid_ex|ex_aluop[0]'
-Slack : -5.152
-TNS   : -169.405
+Slack : -3.619
+TNS   : -113.225
 
 Type  : Slow 1200mV 85C Model Setup 'EXE:myexe|cp0_reg_read_addr_o[0]'
-Slack : -3.566
-TNS   : -104.076
+Slack : -3.162
+TNS   : -95.444
 
-Type  : Slow 1200mV 85C Model Setup 'PC:mypc|pc[10]'
-Slack : -2.081
-TNS   : -23.651
-
-Type  : Slow 1200mV 85C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
-Slack : -1.572
-TNS   : -37.653
+Type  : Slow 1200mV 85C Model Setup 'resetn'
+Slack : -0.995
+TNS   : -1.402
 
 Type  : Slow 1200mV 85C Model Hold 'qclk'
-Slack : 0.001
-TNS   : 0.000
+Slack : -1.132
+TNS   : -19.196
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK:myclock|clock'
-Slack : 0.452
-TNS   : 0.000
+Slack : -0.956
+TNS   : -14.362
+
+Type  : Slow 1200mV 85C Model Hold 'resetn'
+Slack : -0.551
+TNS   : -0.857
 
 Type  : Slow 1200mV 85C Model Hold 'SEG_LED:mysegled|flag'
-Slack : 0.453
-TNS   : 0.000
+Slack : -0.474
+TNS   : -2.498
 
 Type  : Slow 1200mV 85C Model Hold 'ID_EX:myid_ex|ex_aluop[0]'
-Slack : 0.493
+Slack : -0.434
+TNS   : -3.699
+
+Type  : Slow 1200mV 85C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : 0.250
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'PC:mypc|pc[10]'
-Slack : 0.577
+Type  : Slow 1200mV 85C Model Recovery 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.141
+TNS   : -13.729
+
+Type  : Slow 1200mV 85C Model Recovery 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : 0.184
 TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -2.888
+TNS   : -70.841
+
+Type  : Slow 1200mV 85C Model Removal 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.367
+TNS   : -17.230
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'qclk'
 Slack : -3.000
 TNS   : -337.575
 
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'resetn'
+Slack : -3.000
+TNS   : -3.000
+
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK:myclock|clock'
 Slack : -1.487
-TNS   : -1489.974
+TNS   : -1323.430
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SEG_LED:mysegled|flag'
 Slack : -1.487
 TNS   : -31.227
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PC:mypc|pc[10]'
-Slack : 0.288
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : 0.276
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ID_EX:myid_ex|ex_aluop[0]'
-Slack : 0.312
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'EXE:myexe|cp0_reg_read_addr_o[0]'
-Slack : 0.387
+Slack : 0.280
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'SEG_LED:mysegled|flag'
-Slack : -43.951
-TNS   : -195.075
+Slack : -42.683
+TNS   : -185.517
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK:myclock|clock'
-Slack : -24.934
-TNS   : -10269.426
+Slack : -25.068
+TNS   : -8005.800
 
 Type  : Slow 1200mV 0C Model Setup 'qclk'
-Slack : -19.012
-TNS   : -1211.450
+Slack : -19.872
+TNS   : -1180.058
 
 Type  : Slow 1200mV 0C Model Setup 'ID_EX:myid_ex|ex_aluop[0]'
-Slack : -5.055
-TNS   : -165.109
+Slack : -3.507
+TNS   : -110.852
 
 Type  : Slow 1200mV 0C Model Setup 'EXE:myexe|cp0_reg_read_addr_o[0]'
-Slack : -3.265
-TNS   : -96.914
+Slack : -3.093
+TNS   : -92.190
 
-Type  : Slow 1200mV 0C Model Setup 'PC:mypc|pc[10]'
-Slack : -2.007
-TNS   : -22.847
-
-Type  : Slow 1200mV 0C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
-Slack : -1.405
-TNS   : -32.260
+Type  : Slow 1200mV 0C Model Setup 'resetn'
+Slack : -0.837
+TNS   : -0.950
 
 Type  : Slow 1200mV 0C Model Hold 'qclk'
-Slack : 0.016
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'ID_EX:myid_ex|ex_aluop[0]'
-Slack : 0.313
-TNS   : 0.000
+Slack : -0.988
+TNS   : -16.886
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK:myclock|clock'
-Slack : 0.401
-TNS   : 0.000
+Slack : -0.862
+TNS   : -12.496
+
+Type  : Slow 1200mV 0C Model Hold 'resetn'
+Slack : -0.627
+TNS   : -1.044
 
 Type  : Slow 1200mV 0C Model Hold 'SEG_LED:mysegled|flag'
-Slack : 0.401
+Slack : -0.459
+TNS   : -2.506
+
+Type  : Slow 1200mV 0C Model Hold 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -0.364
+TNS   : -2.975
+
+Type  : Slow 1200mV 0C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : 0.267
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'PC:mypc|pc[10]'
-Slack : 0.562
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Recovery 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.099
+TNS   : -13.043
+
+Type  : Slow 1200mV 0C Model Recovery 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -0.031
+TNS   : -0.073
+
+Type  : Slow 1200mV 0C Model Removal 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -2.454
+TNS   : -59.820
+
+Type  : Slow 1200mV 0C Model Removal 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.077
+TNS   : -10.491
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'qclk'
 Slack : -3.000
 TNS   : -337.575
 
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'resetn'
+Slack : -3.000
+TNS   : -3.000
+
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK:myclock|clock'
 Slack : -1.487
-TNS   : -1489.974
+TNS   : -1323.430
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SEG_LED:mysegled|flag'
 Slack : -1.487
 TNS   : -31.227
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ID_EX:myid_ex|ex_aluop[0]'
-Slack : 0.052
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PC:mypc|pc[10]'
-Slack : 0.263
+Slack : 0.082
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'EXE:myexe|cp0_reg_read_addr_o[0]'
-Slack : 0.296
+Slack : 0.126
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'SEG_LED:mysegled|flag'
-Slack : -19.892
-TNS   : -81.660
+Slack : -19.334
+TNS   : -79.152
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK:myclock|clock'
-Slack : -11.249
-TNS   : -4318.137
+Slack : -11.328
+TNS   : -3326.757
 
 Type  : Fast 1200mV 0C Model Setup 'qclk'
-Slack : -8.300
-TNS   : -437.717
+Slack : -8.666
+TNS   : -433.804
 
 Type  : Fast 1200mV 0C Model Setup 'ID_EX:myid_ex|ex_aluop[0]'
-Slack : -1.867
-TNS   : -58.533
+Slack : -1.110
+TNS   : -33.564
 
 Type  : Fast 1200mV 0C Model Setup 'EXE:myexe|cp0_reg_read_addr_o[0]'
-Slack : -1.250
-TNS   : -36.379
+Slack : -1.019
+TNS   : -29.699
 
-Type  : Fast 1200mV 0C Model Setup 'PC:mypc|pc[10]'
-Slack : -0.322
-TNS   : -1.922
-
-Type  : Fast 1200mV 0C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
-Slack : -0.792
-TNS   : -21.276
+Type  : Fast 1200mV 0C Model Setup 'resetn'
+Slack : 0.084
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'qclk'
-Slack : -0.176
-TNS   : -0.325
-
-Type  : Fast 1200mV 0C Model Hold 'PC:mypc|pc[10]'
-Slack : 0.085
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'ID_EX:myid_ex|ex_aluop[0]'
-Slack : 0.121
-TNS   : 0.000
+Slack : -0.582
+TNS   : -11.184
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK:myclock|clock'
-Slack : 0.186
-TNS   : 0.000
+Slack : -0.408
+TNS   : -4.914
+
+Type  : Fast 1200mV 0C Model Hold 'resetn'
+Slack : -0.343
+TNS   : -0.547
+
+Type  : Fast 1200mV 0C Model Hold 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -0.312
+TNS   : -5.568
 
 Type  : Fast 1200mV 0C Model Hold 'SEG_LED:mysegled|flag'
-Slack : 0.187
+Slack : -0.076
+TNS   : -0.171
+
+Type  : Fast 1200mV 0C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -0.029
+TNS   : -0.111
+
+Type  : Fast 1200mV 0C Model Recovery 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -0.291
+TNS   : -1.514
+
+Type  : Fast 1200mV 0C Model Recovery 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : 0.192
 TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -1.232
+TNS   : -28.989
+
+Type  : Fast 1200mV 0C Model Removal 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -0.454
+TNS   : -4.483
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'qclk'
 Slack : -3.000
-TNS   : -243.024
+TNS   : -243.216
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'resetn'
+Slack : -3.000
+TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK:myclock|clock'
 Slack : -1.000
-TNS   : -1002.000
+TNS   : -890.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SEG_LED:mysegled|flag'
 Slack : -1.000
 TNS   : -21.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ID_EX:myid_ex|ex_aluop[0]'
-Slack : 0.277
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PC:mypc|pc[10]'
-Slack : 0.346
+Slack : 0.209
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'EXE:myexe|cp0_reg_read_addr_o[0]'
-Slack : 0.402
+Slack : 0.341
 TNS   : 0.000
 
 ------------------------------------------------------------

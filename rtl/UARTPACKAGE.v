@@ -23,11 +23,6 @@ module UARTPACKAGE(
     reg [1:0] package_kind;
     reg [31:0] package_data;
     
-    reg package_send_flag;
-    reg [23:0] package_clk_cnt;
-    
-   reg [2:0] tosend_cnt;
-
 	reg send_en_d0;
 	reg send_en_d1;
 	
@@ -59,7 +54,7 @@ module UARTPACKAGE(
 		end else begin
 			if(send_flag) begin
 				package_flag <= 1'b1;
-			end else if((tosend_cnt == 3'd10) && (clk_cnt == 25'd20828)) begin
+			end else if((package_cnt == 4'd10) && (clk_cnt == 25'd20828)) begin
 				package_flag <= 1'b0;
 			end
 		end

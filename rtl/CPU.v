@@ -163,25 +163,30 @@ module CPU(
     reg txflag;
     reg[25:0] txclk_cnt;
     
+    reg [19:0] clk_count;
     
     always @(posedge qclk) begin
         if(resetn == `RstEnable) begin
             txflag <= 0;
-            txclk_cnt <= 25'd0;
-        end else if(txclk_cnt == 25'd50_000_000) begin
+            txclk_cnt <= 26'd0;
+        end else if(txclk_cnt == 26'd50_000_000) begin
             txflag <= 1;
-            txclk_cnt <= 25'd0;
+            txclk_cnt <= 26'd0;
         end else begin
             txflag <= 0;
-            txclk_cnt <= txclk_cnt + 1;
+            txclk_cnt <= txclk_cnt + 26'd1;
         end
+    end
+
+    always @(posedge clk) begin
+        clk_count <= clk_count + 20'b1;
     end
     
     CLOCK myclock(.clk(qclk),.resetn(resetn),
                 .clock(clk));
                 
     SEG_LED mysegled(.clk(qclk),.resetn(resetn),
-                      .data(if_pc[19:0]),
+                      .data(clk_count),
                      .seg_sel(seg_sel),.seg_control(seg_led));
      
     /* 
