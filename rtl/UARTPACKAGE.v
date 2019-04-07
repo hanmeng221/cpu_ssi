@@ -15,7 +15,10 @@ module UARTPACKAGE(
     input wire resetn,
     input wire send_clk,
     input wire rx,
-    output tx
+    output tx,
+    output rx_done,
+    output [7:0] rx_data
+   
 );
 
     reg [3:0] package_cnt;
@@ -37,7 +40,7 @@ module UARTPACKAGE(
 	assign send_flag = (~send_en_d1) & send_en_d0;
 	
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn) begin
 		if(resetn == `RstEnable) begin
 			send_en_d0 <= 1'b0;
 			send_en_d1 <= 1'b0;
@@ -48,7 +51,7 @@ module UARTPACKAGE(
 	end
 	
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn) begin
 		if(resetn == `RstEnable) begin	
 			package_flag <= 1'b0;
 		end else begin
@@ -60,7 +63,7 @@ module UARTPACKAGE(
 		end
 	end
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn) begin
 		if (resetn == `RstEnable) begin
 			clk_cnt <= 25'd0;
 			package_cnt <= 4'd0;
@@ -83,7 +86,7 @@ module UARTPACKAGE(
 		end
 	end
 	 
-    always@(posedge clk) begin
+    always@(posedge clk or negedge resetn ) begin
         if(resetn == `RstEnable) begin
             package_addr <= 5'd0;
             package_data <= `ZeroWord;
@@ -148,11 +151,13 @@ module UARTPACKAGE(
         end
     end
     
+    
      UARTDATA myuartdata(
         .clk(clk),.resetn(resetn),
         .uart_send_en(uart_en),
         .data(package_data),.addr(package_addr),.kind(package_kind),
-        .rx(rx),.tx(tx),.done());
+        .rx(rx),.tx(tx),
+        .receive_done(rx_done),.receive_data(rx_data));
    
 endmodule
     

@@ -7,7 +7,8 @@ module UARTDATA(
 	input [1:0] kind,
 	input rx,
 	output tx,
-	output done
+	output [7:0] receive_data,
+    output receive_done
 );
 
 	wire legal = data2[0] ^  data3[0] ^ data4[0] ^ data5[0] ^ data6[0];
@@ -35,7 +36,7 @@ module UARTDATA(
 	assign send_flag = (~send_en_d1) & send_en_d0;
 	
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if(resetn == `RstEnable) begin
 			send_en_d0 <= 1'b0;
 			send_en_d1 <= 1'b0;
@@ -46,7 +47,7 @@ module UARTDATA(
 	end
 	
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if(resetn == `RstEnable) begin	
 			uart_flag <= 1'b0;
 		end else begin
@@ -58,7 +59,7 @@ module UARTDATA(
 		end
 	end
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if (resetn == `RstEnable) begin
 			clk_cnt <= 25'd0;
 			tosend_cnt <= 3'd0;
@@ -82,7 +83,7 @@ module UARTDATA(
 	end
 	
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if(resetn == `RstEnable) begin
 			send_data <= 8'd0;
 		end else if(uart_flag) begin
@@ -99,9 +100,11 @@ module UARTDATA(
 		end
 	end
 	
+ 
+    
 	UART myuart(.clk(clk),.resetn(resetn),
                 .uart_send_en(uart_en),.uart_din(send_data),
-                .uart_rxd(rx),.uart_done(),.uart_data(),
+                .uart_rxd(rx),.uart_done(receive_done),.uart_data(receive_data),
                 .uart_txd(tx));
     
 	

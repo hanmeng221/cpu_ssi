@@ -29,7 +29,7 @@ module HILO(
     output reg [31:0] hi_o,
     output reg [31:0] lo_o
     );
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn) begin
 		if( resetn == `RstEnable) begin
 			hi_o <= `ZeroWord;
 			lo_o <= `ZeroWord;

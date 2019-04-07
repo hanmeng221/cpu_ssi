@@ -31,7 +31,7 @@ module SEG_LED(
     
     reg [3:0] num_disp;
     
-    always @ (posedge clk ) begin
+    always @ (posedge clk or negedge resetn) begin
         if ( resetn == `RstEnable) begin
             cnt <= 20'b0;
             flag<= 1'b0;
@@ -44,7 +44,7 @@ module SEG_LED(
         end
     end
     
-    always @ (posedge flag) begin
+    always @ (posedge flag or negedge resetn) begin
         if (resetn == `RstEnable) begin
             cnt_sel <= 3'b0;
         end else begin
@@ -55,7 +55,7 @@ module SEG_LED(
         end
     end
     
-    always @ (posedge flag ) begin
+    always @ (posedge flag  or negedge resetn) begin
         if(resetn == `RstEnable) begin
         seg_sel  <= 6'b111111;              //位选信号低电平有效
         end else begin
@@ -99,7 +99,7 @@ module SEG_LED(
         end
     end
     
-    always @ (posedge flag ) begin
+    always @ (posedge flag or negedge resetn) begin
         if (resetn == `RstEnable) begin
             seg_control <= 8'hc0;
         end else begin

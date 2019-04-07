@@ -49,7 +49,7 @@ module MEM_WB(
 
     );
 
-	always@(posedge clk) begin
+	always@(posedge clk or negedge resetn ) begin
 		if(resetn == `RstEnable) begin
 			wb_wd		<= `NOPRegAddr;
 			wb_wdata	<= `ZeroWord;

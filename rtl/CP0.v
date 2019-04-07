@@ -44,7 +44,7 @@ module CP0(
     );
 
 
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn) begin
 		if (resetn == `RstEnable) begin
 			count_o 	<= `ZeroWord;
 			compare_o	<= `ZeroWord;

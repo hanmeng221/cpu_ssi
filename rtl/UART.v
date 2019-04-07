@@ -36,7 +36,7 @@ module UART(
 	assign start_flag = uart_rxd_d1 & (~uart_rxd_d0);
 	assign en_flag = (~uart_en_d1) & uart_en_d0;
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if(resetn == `RstEnable) begin
 			uart_rxd_d0 <= 1'b0;
 			uart_rxd_d1 <= 1'b0;
@@ -52,7 +52,7 @@ module UART(
 		end
 	end
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if(resetn == `RstEnable) begin	
 			rx_flag <= 1'b0;
 			
@@ -65,7 +65,7 @@ module UART(
 		end
 	end
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if(resetn == `RstEnable) begin	
 			tx_flag <= 1'b0;
 			tx_data <= 8'd0;
@@ -80,7 +80,7 @@ module UART(
 		end
 	end
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if (resetn == `RstEnable) begin
 			clk_cnt_rx <= 16'd0;
 			clk_cnt_tx <= 16'd0;
@@ -112,7 +112,7 @@ module UART(
 		end
 	end
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if(resetn == `RstEnable) begin
 			rxdata <= 8'd0;
 		end else if(rx_flag) begin
@@ -135,7 +135,7 @@ module UART(
 		end
 	end
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if(resetn == `RstEnable) begin
 			uart_txd <= 1'b1;
 		end else if(tx_flag)
@@ -158,7 +158,7 @@ module UART(
 		end
 	end
 				
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if(resetn == `RstEnable) begin
 			uart_data <= 8'd0;
 			uart_done <= 1'b0;
@@ -170,6 +170,7 @@ module UART(
 			uart_done <= 1'b0;
 		end
 	end
+    
 	
 endmodule
 

@@ -30,7 +30,7 @@ module IF_ID(
     output reg [31:0] id_pc,
     output reg [31:0] id_inst
     );
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn) begin
 		if (resetn == `RstEnable) begin
 			id_pc <= `ZeroWord;
 			id_inst <= `ZeroWord;

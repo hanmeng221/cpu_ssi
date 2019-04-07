@@ -52,7 +52,7 @@ module ID_EX(
 	output reg [31:0] ex_current_inst_addr
 	);
 	
-	always@(posedge clk) begin
+	always@(posedge clk or negedge resetn ) begin
 		if (resetn == `RstEnable) begin
 			ex_aluop 	<= `EXE_NOP_OP;
 			ex_alusel	<= `EXE_RES_NOP;

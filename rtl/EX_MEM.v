@@ -59,7 +59,7 @@ module EX_MEM(
 	output reg mem_is_in_delayslot
 	);
 
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if(resetn == `RstEnable) begin
 			mem_wd		<= `NOPRegAddr;
 			mem_wreg 	<= `WriteDisable;

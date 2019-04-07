@@ -31,7 +31,7 @@ module PC(
     output reg [31:0] pc
     );
 	
-	always @(posedge clk) begin
+	always @(posedge clk or negedge resetn ) begin
 		if (resetn == `RstEnable) begin
 			pc <= `InstBegin;
 		end else begin

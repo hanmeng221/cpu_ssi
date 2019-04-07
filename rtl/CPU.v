@@ -21,17 +21,22 @@
 
 module CPU(
     input wire qclk,
-    input wire resetn,
-    //output [31:0] result,
-    //output [31:0] pc,
+    input wire hresetn,
+    input wire artificial,
     input wire rx,
-    output  clk,
+    output reg  clk,
     output [5:0] seg_sel,
     output [7:0] seg_led,
-    output tx
-    
+    output tx,
+    output led1,
+    output led2,
+    output led3
 	//output [31:0] inst
     );
+    wire sresetn;
+    wire mclk;
+    
+    wire resetn = hresetn & sresetn;
     
 	wire [31:0] if_pc,if_inst;
 	wire [31:0] id_pc,id_inst;
@@ -159,42 +164,40 @@ module CPU(
 	wire [31:0] cp0_status_o;
 	wire [31:0] cp0_cause_o;
 	wire [31:0] cp0_epc_o;
-	
-    reg txflag;
-    reg[25:0] txclk_cnt;
     
     reg [19:0] clk_count;
     
-    always @(posedge qclk) begin
-        if(resetn == `RstEnable) begin
-            txflag <= 0;
-            txclk_cnt <= 26'd0;
-        end else if(txclk_cnt == 26'd50_000_000) begin
-            txflag <= 1;
-            txclk_cnt <= 26'd0;
+
+    
+    always @(posedge clk or negedge resetn) begin
+        if(resetn == `RstEnable)begin
+            clk_count <= 21'b0;
         end else begin
-            txflag <= 0;
-            txclk_cnt <= txclk_cnt + 26'd1;
+            clk_count <= clk_count + 1;
         end
     end
-
-    always @(posedge clk) begin
-        clk_count <= clk_count + 20'b1;
+    
+    wire rx_flag;
+    wire [7:0] rx_data;
+    
+    wire sclk;
+    
+    assign led1 =  artificial;
+    
+    always @(*) begin
+        if(artificial == 1'b1)
+            clk <= sclk;
+        else 
+            clk <= mclk;
     end
+   
     
     CLOCK myclock(.clk(qclk),.resetn(resetn),
-                .clock(clk));
+                .clock(mclk));
                 
     SEG_LED mysegled(.clk(qclk),.resetn(resetn),
                       .data(clk_count),
                      .seg_sel(seg_sel),.seg_control(seg_led));
-     
-    /* 
-    UART myuart(.clk(qclk),.resetn(resetn),
-                .uart_send_en(txflag),.uart_din(8'b11110000),
-                .uart_rxd(rx),.uart_done(),.uart_data(),
-                .uart_txd(tx));
-      */
 
     UARTPACKAGE myuartpackage(
          .regdata(wb_wdata), .regaddr(wb_wd),.regen(wb_wreg),
@@ -202,18 +205,14 @@ module CPU(
          .inst(if_inst),
          .other_pc(if_pc), .other_hi(hi_o),.other_lo(lo_o),  
          .clk(qclk),.resetn(resetn),
-         .send_clk(txflag),
-         .rx(rx),.tx(tx)
-    );
+         .send_clk(clk),
+         .rx(rx),.tx(tx),
+         .rx_done(rx_flag),.rx_data(rx_data));
     
-    /*
-    UARTDATA myuartdata(
-        .clk(qclk),.resetn(resetn),
-        .uart_send_en(txflag),
-        .data(t1reg),.addr(5'b01001),.kind(2'b0),
-        .rx(rx),.tx(tx),.done());
+    QTCONTROL myqtcontrol(.clk(qclk),.resetn(resetn),
+                        .rx_done(rx_flag),.rx_data(rx_data),
+        .sresetn(sresetn),.sclk(sclk));
         
-      */  
 	PC mypc(.clk(clk),.resetn(resetn),
 			.stall(stall),
 			.branch_target_address_i(id_branch_target_address_o),.branch_flag_i(id_branch_flag_o),

@@ -29,9 +29,7 @@ module REG(
     input wire [4:0] waddr,
     input wire [31:0] wdata,
     output reg [31:0] rdata1,
-    output reg [31:0] rdata2,
-    
-    output reg [31:0] t1data
+    output reg [31:0] rdata2
     );
 
 	reg[31:0] regs[0:31];
@@ -70,12 +68,8 @@ module REG(
 			regs[31] <= 32'b0;
 		end
 		
-	always@(posedge clk)begin
-		if(resetn == `RstDisable) begin
-			if((wreg == `WriteEnable) && (waddr != 5'h0))begin
-				regs[waddr] <= wdata;
-			end
-		end else begin
+	always@(posedge clk or negedge resetn)begin
+		if(resetn == `RstEnable) begin
 			regs[0] <= 32'b0;
 			regs[1] <= 32'b0;
 			regs[2] <= 32'b0;
@@ -108,7 +102,11 @@ module REG(
 			regs[29] <= 32'b0;
 			regs[30] <= 32'b0;
 			regs[31] <= 32'b0;
-		end
+		end else begin
+            if((wreg == `WriteEnable) && (waddr != 5'h0))begin
+				regs[waddr] <= wdata;
+			end
+        end
 	end
 	
 	always@(*) begin
@@ -135,9 +133,6 @@ module REG(
 		end
 	end
 
-    always @(*) begin
-        t1data <= regs[5'd9];
-    end
     
 
 endmodule
