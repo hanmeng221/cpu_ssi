@@ -30,9 +30,21 @@ module CPU(
     output tx,
     output led1,
     output led2,
-    output led3
-	//output [31:0] inst
+    output led3,
+    
+
+    //lcd接口                          
+    output          	lcd_hs,         //LCD 行同步信号
+    output          	lcd_vs,         //LCD 场同步信号
+    output           lcd_de,         //LCD 数据使能
+    output    [15:0] lcd_rgb,        //LCD RGB565颜色数据
+    output          	lcd_bl,         //LCD 背光控制信号
+    output          	lcd_rst,        //LCD 复位信号
+    output          	lcd_pclk        //LCD 采样时钟    
+  
     );
+	//output [31:0] inst
+   
     wire sresetn;
     wire mclk;
     
@@ -171,9 +183,9 @@ module CPU(
     
     always @(posedge clk or negedge resetn) begin
         if(resetn == `RstEnable)begin
-            clk_count <= 21'b0;
+            clk_count <= 20'b0;
         end else begin
-            clk_count <= clk_count + 1;
+            clk_count <= clk_count + 20'b1;
         end
     end
     
@@ -190,7 +202,27 @@ module CPU(
         else 
             clk <= mclk;
     end
-   
+    
+  
+    wire [10:0] rgb_offset;
+    wire [15:0] rgb_data;
+    RGBSCREEN myrgbscreen(.clk(qclk), .resetn(resetn), 
+    
+    .rgb_data(rgb_data),
+    .rgb_offset(rgb_offset),
+    //lcd接口                          
+    .lcd_hs(lcd_hs),         //LCD 行同步信号
+    .lcd_vs(lcd_vs),         //LCD 场同步信号
+    .lcd_de(lcd_de),         //LCD 数据使能
+    .lcd_rgb(lcd_rgb),        //LCD RGB565颜色数据
+    .lcd_bl(lcd_bl),         //LCD 背光控制信号
+    .lcd_rst(lcd_rst),        //LCD 复位信号
+    .lcd_pclk(lcd_pclk)        //LCD 采样时钟
+    
+);
+
+
+    
     
     CLOCK myclock(.clk(qclk),.resetn(resetn),
                 .clock(mclk));
@@ -220,7 +252,8 @@ module CPU(
 			.pc(if_pc));
 	
 	IM myim(.pc_in(if_pc),
-			.inst_out(if_inst));
+			.inst_out(if_inst),
+            .clk(clk));
 	
 	IF_ID myif_id(.if_pc(if_pc),.if_inst(if_inst),
 				.clk(clk),.resetn(resetn),
@@ -334,8 +367,10 @@ module CPU(
 	
 	DATAMEM mydatamem(.addr(mem_mem_addr_o),.data(mem_mem_data),.we(mem_mem_we),
 					.clk(clk),
-					.data_o(mem_data_i));
-	
+					.data_o(mem_data_i),
+                    .rgb_offset(rgb_offset),.rgb_data(rgb_data),.rgb_clk(lcd_pclk));
+                    
+           
 	CP0 mycp0( .we_i(mem_wb_wb_cp0_reg_we),.waddr_i(mem_wb_wb_cp0_reg_write_addr),.wdata_i(mem_wb_wb_cp0_reg_data),
 				.int_i(),.raddr_i(ex_cp0_reg_read_addr_o),
 				.excepttype_i(mem_excepttype_o),.current_inst_addr_i(mem_current_inst_addr_o),.is_in_delayslot_i(mem_is_in_delayslot_o),
@@ -343,9 +378,5 @@ module CPU(
 				.data_o(cp0_data_o),
 				.count_o(),.compare_o(),.status_o(cp0_status_o),.cause_o(cp0_cause_o),.epc_o(cp0_epc_o),.config_o(),.prid_o(),.timer_int_o());
 
-
-	//assign pc = if_pc;
-	//assign inst = if_inst;
-	//assign result = ex_wdata;
     
 endmodule

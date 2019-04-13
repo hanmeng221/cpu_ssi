@@ -1,3 +1,4 @@
+`include "define.v"
 module SEG_LED(
     input wire clk,
     input wire resetn,
@@ -57,36 +58,36 @@ module SEG_LED(
     
     always @ (posedge flag  or negedge resetn) begin
         if(resetn == `RstEnable) begin
-        seg_sel  <= 6'b111111;              //位选信号低电平有效
+        seg_sel  <= 6'b111111;              //
         end else begin
             case (cnt_sel)
                 3'd0 :begin
-                    seg_sel  <= 6'b011111;  //显示数码管最低位
-                    num_disp <= num[3:0] ;  //显示的数据
+                    seg_sel  <= 6'b011111;  //
+                    num_disp <= num[3:0] ;  //
                  
                 end
                 3'd1 :begin
-                    seg_sel  <= 6'b111110;  //显示数码管第1位
+                    seg_sel  <= 6'b111110;  //1
                     num_disp <= num[7:4] ;
                   
                 end
                 3'd2 :begin
-                    seg_sel  <= 6'b111101;  //显示数码管第2位
+                    seg_sel  <= 6'b111101;  //2
                     num_disp <= num[11:8];
                  
                 end
                 3'd3 :begin
-                    seg_sel  <= 6'b111011;  //显示数码管第3位
+                    seg_sel  <= 6'b111011;  //3
                     num_disp <= num[15:12];
                     
                 end
                 3'd4 :begin
-                    seg_sel  <= 6'b110111;  //显示数码管第4位
+                    seg_sel  <= 6'b110111;  //4
                     num_disp <= num[19:16];
                   
                 end
                 3'd5 :begin
-                    seg_sel  <= 6'b101111;  //显示数码管最高位
+                    seg_sel  <= 6'b101111;  //
                     num_disp <= num[23:20];
                   
                 end
@@ -104,16 +105,16 @@ module SEG_LED(
             seg_control <= 8'hc0;
         end else begin
             case (num_disp)
-                4'd0 : seg_control <= 8'b11000000; //显示数字 0
-                4'd1 : seg_control <= 8'b11111001; //显示数字 1
-                4'd2 : seg_control <= 8'b10100100; //显示数字 2
-                4'd3 : seg_control <= 8'b10110000; //显示数字 3
-                4'd4 : seg_control <= 8'b10011001; //显示数字 4
-                4'd5 : seg_control <= 8'b10010010; //显示数字 5
-                4'd6 : seg_control <= 8'b10000010; //显示数字 6
-                4'd7 : seg_control <= 8'b11111000; //显示数字 7
-                4'd8 : seg_control <= 8'b10000000; //显示数字 8
-                4'd9 : seg_control <= 8'b10010000; //显示数字 9
+                4'd0 : seg_control <= 8'b11000000; // 0
+                4'd1 : seg_control <= 8'b11111001; // 1
+                4'd2 : seg_control <= 8'b10100100; // 2
+                4'd3 : seg_control <= 8'b10110000; // 3
+                4'd4 : seg_control <= 8'b10011001; // 4
+                4'd5 : seg_control <= 8'b10010010; // 5
+                4'd6 : seg_control <= 8'b10000010; // 6
+                4'd7 : seg_control <= 8'b11111000; // 7
+                4'd8 : seg_control <= 8'b10000000; // 8
+                4'd9 : seg_control <= 8'b10010000; // 9
                 default: 
                    seg_control <= {8'b00000000};
             endcase

@@ -1,3 +1,4 @@
+`include "define.v"
 module UART(
 	input clk,
 	input resetn,

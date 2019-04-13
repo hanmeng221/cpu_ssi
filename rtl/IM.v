@@ -20,12 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 module IM(
     input wire [31:0] pc_in,
-    output  [31:0] inst_out
+    output  [31:0] inst_out,
+    input wire clk
     );
-	reg [31:0] im[1023:0];
-	assign inst_out = im[pc_in[11:2]];
-        
-	initial $readmemh("E:/fpga/muliplyCPU/rtl/rom.data",im);
-		
+	//reg [31:0] im[1023:0];
+    IM_ROM my_im_rom(
+     .address(pc_in[11:2]),
+     .clock(~clk),
+     .q(inst_out));
 	
 endmodule

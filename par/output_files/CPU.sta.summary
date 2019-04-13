@@ -1,0 +1,461 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'SEG_LED:mysegled|flag'
+Slack : -50.971
+TNS   : -222.391
+
+Type  : Slow 1200mV 85C Model Setup 'qclk'
+Slack : -25.071
+TNS   : -820.510
+
+Type  : Slow 1200mV 85C Model Setup 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -21.754
+TNS   : -1625.141
+
+Type  : Slow 1200mV 85C Model Setup 'artificial'
+Slack : -21.124
+TNS   : -12783.363
+
+Type  : Slow 1200mV 85C Model Setup 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -8.315
+TNS   : -206.780
+
+Type  : Slow 1200mV 85C Model Setup 'hresetn'
+Slack : -4.942
+TNS   : -25.289
+
+Type  : Slow 1200mV 85C Model Setup 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : -4.817
+TNS   : -129.040
+
+Type  : Slow 1200mV 85C Model Setup 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 99.532
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'artificial'
+Slack : -4.132
+TNS   : -172.108
+
+Type  : Slow 1200mV 85C Model Hold 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -1.981
+TNS   : -100.456
+
+Type  : Slow 1200mV 85C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.905
+TNS   : -45.999
+
+Type  : Slow 1200mV 85C Model Hold 'qclk'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'SEG_LED:mysegled|flag'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.691
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'hresetn'
+Slack : 1.595
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : 3.121
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -3.526
+TNS   : -88.893
+
+Type  : Slow 1200mV 85C Model Recovery 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -3.122
+TNS   : -42.247
+
+Type  : Slow 1200mV 85C Model Recovery 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : -2.862
+TNS   : -63.638
+
+Type  : Slow 1200mV 85C Model Recovery 'qclk'
+Slack : -2.450
+TNS   : -414.885
+
+Type  : Slow 1200mV 85C Model Recovery 'SEG_LED:mysegled|flag'
+Slack : -2.168
+TNS   : -36.649
+
+Type  : Slow 1200mV 85C Model Recovery 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -1.185
+TNS   : -20.317
+
+Type  : Slow 1200mV 85C Model Recovery 'artificial'
+Slack : -0.674
+TNS   : -31.115
+
+Type  : Slow 1200mV 85C Model Removal 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -4.454
+TNS   : -268.904
+
+Type  : Slow 1200mV 85C Model Removal 'artificial'
+Slack : -3.739
+TNS   : -3157.853
+
+Type  : Slow 1200mV 85C Model Removal 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.592
+TNS   : -38.894
+
+Type  : Slow 1200mV 85C Model Removal 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : -0.780
+TNS   : -15.597
+
+Type  : Slow 1200mV 85C Model Removal 'qclk'
+Slack : 0.548
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'SEG_LED:mysegled|flag'
+Slack : 1.073
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.137
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'artificial'
+Slack : -3.201
+TNS   : -2913.867
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'hresetn'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SEG_LED:mysegled|flag'
+Slack : -1.487
+TNS   : -31.227
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -0.104
+TNS   : -1.940
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : 0.253
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : 0.408
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'qclk'
+Slack : 9.655
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 55.262
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'SEG_LED:mysegled|flag'
+Slack : -46.926
+TNS   : -203.893
+
+Type  : Slow 1200mV 0C Model Setup 'qclk'
+Slack : -23.174
+TNS   : -763.396
+
+Type  : Slow 1200mV 0C Model Setup 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -19.947
+TNS   : -1526.796
+
+Type  : Slow 1200mV 0C Model Setup 'artificial'
+Slack : -19.184
+TNS   : -12021.423
+
+Type  : Slow 1200mV 0C Model Setup 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -8.164
+TNS   : -202.707
+
+Type  : Slow 1200mV 0C Model Setup 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : -4.742
+TNS   : -126.855
+
+Type  : Slow 1200mV 0C Model Setup 'hresetn'
+Slack : -4.599
+TNS   : -24.289
+
+Type  : Slow 1200mV 0C Model Setup 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 100.298
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'artificial'
+Slack : -3.886
+TNS   : -240.605
+
+Type  : Slow 1200mV 0C Model Hold 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -1.904
+TNS   : -96.261
+
+Type  : Slow 1200mV 0C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.676
+TNS   : -39.855
+
+Type  : Slow 1200mV 0C Model Hold 'qclk'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SEG_LED:mysegled|flag'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.627
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'hresetn'
+Slack : 1.480
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : 3.219
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -3.195
+TNS   : -80.518
+
+Type  : Slow 1200mV 0C Model Recovery 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -3.189
+TNS   : -44.919
+
+Type  : Slow 1200mV 0C Model Recovery 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : -2.853
+TNS   : -63.592
+
+Type  : Slow 1200mV 0C Model Recovery 'qclk'
+Slack : -2.371
+TNS   : -403.132
+
+Type  : Slow 1200mV 0C Model Recovery 'SEG_LED:mysegled|flag'
+Slack : -1.921
+TNS   : -32.434
+
+Type  : Slow 1200mV 0C Model Recovery 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -1.353
+TNS   : -25.029
+
+Type  : Slow 1200mV 0C Model Recovery 'artificial'
+Slack : -0.443
+TNS   : -7.918
+
+Type  : Slow 1200mV 0C Model Removal 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -3.773
+TNS   : -254.764
+
+Type  : Slow 1200mV 0C Model Removal 'artificial'
+Slack : -3.648
+TNS   : -3383.225
+
+Type  : Slow 1200mV 0C Model Removal 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.202
+TNS   : -27.427
+
+Type  : Slow 1200mV 0C Model Removal 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : -0.466
+TNS   : -5.934
+
+Type  : Slow 1200mV 0C Model Removal 'qclk'
+Slack : 0.490
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'SEG_LED:mysegled|flag'
+Slack : 0.948
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.810
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'artificial'
+Slack : -3.201
+TNS   : -3526.015
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hresetn'
+Slack : -3.000
+TNS   : -3.085
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SEG_LED:mysegled|flag'
+Slack : -1.487
+TNS   : -31.227
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -0.504
+TNS   : -13.703
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : 0.011
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'qclk'
+Slack : 9.605
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 55.230
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'SEG_LED:mysegled|flag'
+Slack : -21.070
+TNS   : -84.921
+
+Type  : Fast 1200mV 0C Model Setup 'qclk'
+Slack : -10.180
+TNS   : -332.638
+
+Type  : Fast 1200mV 0C Model Setup 'artificial'
+Slack : -8.902
+TNS   : -4686.202
+
+Type  : Fast 1200mV 0C Model Setup 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -8.833
+TNS   : -638.915
+
+Type  : Fast 1200mV 0C Model Setup 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -3.038
+TNS   : -72.412
+
+Type  : Fast 1200mV 0C Model Setup 'hresetn'
+Slack : -1.489
+TNS   : -6.187
+
+Type  : Fast 1200mV 0C Model Setup 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : -1.488
+TNS   : -37.528
+
+Type  : Fast 1200mV 0C Model Setup 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 106.122
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'artificial'
+Slack : -1.787
+TNS   : -54.996
+
+Type  : Fast 1200mV 0C Model Hold 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -1.004
+TNS   : -50.492
+
+Type  : Fast 1200mV 0C Model Hold 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -0.997
+TNS   : -25.616
+
+Type  : Fast 1200mV 0C Model Hold 'qclk'
+Slack : -0.091
+TNS   : -0.091
+
+Type  : Fast 1200mV 0C Model Hold 'SEG_LED:mysegled|flag'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'hresetn'
+Slack : 0.540
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : 1.294
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.998
+TNS   : -50.804
+
+Type  : Fast 1200mV 0C Model Recovery 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -1.016
+TNS   : -7.665
+
+Type  : Fast 1200mV 0C Model Recovery 'qclk'
+Slack : -1.001
+TNS   : -171.559
+
+Type  : Fast 1200mV 0C Model Recovery 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : -0.881
+TNS   : -17.408
+
+Type  : Fast 1200mV 0C Model Recovery 'SEG_LED:mysegled|flag'
+Slack : -0.655
+TNS   : -11.072
+
+Type  : Fast 1200mV 0C Model Recovery 'artificial'
+Slack : -0.128
+TNS   : -0.452
+
+Type  : Fast 1200mV 0C Model Recovery 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -0.110
+TNS   : -0.205
+
+Type  : Fast 1200mV 0C Model Removal 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -2.028
+TNS   : -108.071
+
+Type  : Fast 1200mV 0C Model Removal 'artificial'
+Slack : -1.483
+TNS   : -794.377
+
+Type  : Fast 1200mV 0C Model Removal 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : -0.611
+TNS   : -14.348
+
+Type  : Fast 1200mV 0C Model Removal 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : -0.310
+TNS   : -5.435
+
+Type  : Fast 1200mV 0C Model Removal 'qclk'
+Slack : 0.223
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'SEG_LED:mysegled|flag'
+Slack : 0.609
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.037
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'artificial'
+Slack : -3.000
+TNS   : -2568.213
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'hresetn'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SEG_LED:mysegled|flag'
+Slack : -1.000
+TNS   : -21.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ID_EX:myid_ex|ex_aluop[0]'
+Slack : -0.063
+TNS   : -0.880
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'EX_MEM:myex_mem|mem_aluop[0]'
+Slack : 0.261
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'EXE:myexe|cp0_reg_read_addr_o[0]'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'qclk'
+Slack : 9.407
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'myrgbscreen|mypll_clk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 55.291
+TNS   : 0.000
+
+------------------------------------------------------------

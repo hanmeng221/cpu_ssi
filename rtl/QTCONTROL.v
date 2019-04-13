@@ -1,3 +1,4 @@
+`include "define.v"
 module QTCONTROL(
     input wire clk,
     input wire resetn,
@@ -69,7 +70,7 @@ module QTCONTROL(
             clk_count <= 25'b0;
         end else begin
             if(clk_start_count == 1'b1) begin
-                clk_count <= clk_count + 1;
+                clk_count <= clk_count + 25'b1;
                 sclk <= 1'b1;
             end else begin
                 sclk <= 1'b0;

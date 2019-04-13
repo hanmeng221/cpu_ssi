@@ -1,3 +1,4 @@
+`include "define.v"
 module CLOCK(
     input wire clk,
     input wire resetn,
@@ -10,7 +11,7 @@ module CLOCK(
 		if (resetn == `RstEnable) begin
 			counter <= `ZeroWord;
             clock <= 1'b0;
-		end else if (counter < 32'd25_000000) begin
+		end else if (counter < 32'd25_0000) begin
             counter <= counter + 1'b1;
 		end else begin
             counter <= `ZeroWord;

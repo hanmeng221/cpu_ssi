@@ -37,8 +37,7 @@ module UARTPACKAGE(
 	
 	reg uart_en;
 	reg [24:0] clk_cnt;
-	assign send_flag = (~send_en_d1) & send_en_d0;
-	
+	assign send_flag = (~send_en_d0) & send_en_d1;
 	
 	always @(posedge clk or negedge resetn) begin
 		if(resetn == `RstEnable) begin

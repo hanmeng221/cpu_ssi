@@ -46,7 +46,7 @@
 `define InterruptAssert		1'b1
 `define InterruptNotAssert	1'b0
 
-`define InstBegin			32'h00003000
+`define InstBegin			32'h00003000 - 32'h4
 
 `define InstValid 1'b0
 `define InstInvalid 1'b1

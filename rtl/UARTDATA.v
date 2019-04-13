@@ -1,3 +1,4 @@
+`include "define.v"
 module UARTDATA(
 	input clk,
 	input resetn,

@@ -25,28 +25,54 @@ module DATAMEM(
     input [31:0] data,
     input we,
     input clk,
-    output reg [31:0] data_o
+    output [31:0] data_o,
+    input  [10:0] rgb_offset,
+    input rgb_clk,
+    output [15:0] rgb_data
     );
-	reg [31:0] data_mem[1023:0];
-	
+    //a 口用于CPU输入输出
+    //b 口用于RGB读取
+    
+    dm_ram mydm_rams(
+  
+    .clock_a(~clk),
+    .address_a(addr[11:2]),
+	.data_a(data ),
+	.wren_a(we),
+	.q_a(data_o),
+
+    
+    .clock_b(rgb_clk),
+    .address_b(rgb_offset),
+	.data_b(16'd0),
+    .wren_b(`WriteDisable),
+	.q_b(rgb_data));
+    
+     
+    /*
+    
+	//reg [31:0] data_mem[1023:0];
+    reg [31:0] data_mem;
     //initial
 	//	$readmemh("E:\xls\temp\data.txt",data_mem);
-		
+	
 	always @(*) begin
 		if ( we == `WriteDisable ) begin
-			data_o <= data_mem[addr[11:2]];
+            //data_o <= data_mem[addr[11:2]];
+            data_o <= data_mem;
 		end else begin
 			data_o <= `ZeroWord;
-		end
+        end
 	end
 	
 	always @( posedge clk) begin
 		if(we == `WriteEnable) begin
-			data_mem[addr[11:2]] 		<= data;
-		end
+			//data_mem[addr[11:2]] 		<= data;
+            data_mem 		<= data;
+        end
 	end
-	
-			
+    */    
+  
 
-
+    
 endmodule
